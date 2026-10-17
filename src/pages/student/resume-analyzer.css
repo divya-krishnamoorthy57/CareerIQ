@@ -1,0 +1,464 @@
+/* ================================
+   CAREERIQ RESUME ANALYZER
+================================ */
+
+.resume-analyzer-page {
+  min-height: 100vh;
+  padding: 48px 0 80px;
+  background: #f6f8fc;
+  color: #172554;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.resume-header {
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  padding: 0 24px;
+}
+
+.resume-header > span {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #4f46e5;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.resume-header h1 {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1.15;
+  font-weight: 800;
+  color: #172554;
+}
+
+.resume-header p {
+  max-width: 700px;
+  margin-top: 18px;
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ================================
+   UPLOAD CARD
+================================ */
+
+.resume-upload-card {
+  max-width: 1058px;
+  margin: 0 auto;
+  padding: 42px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(30, 64, 175, 0.08);
+}
+
+.upload-icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.resume-upload-card h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #172554;
+}
+
+.resume-upload-card > p {
+  margin: 8px 0 24px;
+  color: #64748b;
+}
+
+.choose-file-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 155px;
+  padding: 14px 24px;
+  border: 1px solid #c7d2fe;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #4f46e5;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.choose-file-button:hover {
+  background: #eef2ff;
+}
+
+/* ================================
+   SELECTED FILE
+================================ */
+
+.selected-file {
+  max-width: 680px;
+  margin: 28px auto 0;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  text-align: left;
+}
+
+.selected-file > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.selected-file strong {
+  color: #172554;
+  font-size: 15px;
+}
+
+.selected-file span {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.selected-file button {
+  border: none;
+  background: transparent;
+  color: #ef4444;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ================================
+   ERROR
+================================ */
+
+.resume-error {
+  max-width: 680px;
+  margin: 18px auto 0;
+  padding: 12px 16px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  color: #b91c1c;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* ================================
+   ANALYZE BUTTON
+================================ */
+
+.analyze-button {
+  width: min(680px, 100%);
+  margin-top: 30px;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.analyze-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(79, 70, 229, 0.25);
+}
+
+.analyze-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ================================
+   RESULTS
+================================ */
+
+.resume-results {
+  max-width: 1100px;
+  margin: 70px auto 0;
+  padding: 0 24px;
+}
+
+.results-heading {
+  margin-bottom: 28px;
+}
+
+.results-heading > span {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #4f46e5;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.results-heading h2 {
+  margin: 0;
+  font-size: 34px;
+  color: #172554;
+}
+
+.results-heading p {
+  margin-top: 8px;
+  color: #64748b;
+}
+
+/* ================================
+   SCORE CARD
+================================ */
+
+.resume-score-card {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  padding: 34px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 22px;
+  box-shadow: 0 12px 35px rgba(30, 64, 175, 0.06);
+}
+
+/* SCORE CIRCLE */
+
+.score-circle {
+  width: 155px;
+  height: 155px;
+  min-width: 155px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 12px solid #dbeafe;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.score-circle strong {
+  display: block;
+  margin: 0;
+  color: #2563eb;
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1;
+  visibility: visible;
+  opacity: 1;
+}
+
+.score-circle span {
+  display: block;
+  margin-top: 7px;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* SCORE CONTENT */
+
+.score-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #4f46e5;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.resume-score-card h3 {
+  margin: 0;
+  color: #172554;
+  font-size: 25px;
+}
+
+.resume-score-card p {
+  margin: 10px 0 8px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.resume-meta {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* ================================
+   RESULT GRID
+================================ */
+
+.resume-result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.result-card {
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(30, 64, 175, 0.05);
+}
+
+.result-card > span {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #4f46e5;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.result-card h3 {
+  margin: 0 0 22px;
+  color: #172554;
+  font-size: 22px;
+}
+
+.result-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.result-list > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.result-list b {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 15px;
+}
+
+.result-list p {
+  margin: 3px 0 0;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* ================================
+   SKILLS
+================================ */
+
+.skills-card {
+  margin-top: 24px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(30, 64, 175, 0.05);
+}
+
+.skills-card > div:first-child > span {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #4f46e5;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.skills-card h3 {
+  margin: 0;
+  color: #172554;
+  font-size: 22px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.skill-tags span {
+  display: inline-flex;
+  padding: 9px 14px;
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+  border-radius: 20px;
+  color: #3730a3;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.skill-tags .no-skills {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+  color: #94a3b8;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+  .resume-analyzer-page {
+    padding-top: 30px;
+  }
+
+  .resume-header h1 {
+    font-size: 34px;
+  }
+
+  .resume-upload-card {
+    margin: 0 16px;
+    padding: 28px 20px;
+  }
+
+  .resume-results {
+    margin-top: 50px;
+    padding: 0 16px;
+  }
+
+  .resume-score-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 26px;
+  }
+
+  .resume-result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .selected-file {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
